@@ -8,8 +8,10 @@ namespace Archaeological_finds_on_reconstructed_streets
     class Program
     {
         static void Main(string[] args)
-        {      
-            var url = $"https://apidata.mos.ru/v1/datasets/2541/features?appid=29e8fc889e30d97aed25e53bb6362aca&q=Moscow";
+        {
+            var ApiKey = "7ab05438c2866a22db1483c273a267ef";
+            var City = "Moscow";
+            var url = $"https://apidata.mos.ru/v1/datasets/2541/features?appid={ApiKey}&q={City}&units=metric";
 
             var request = WebRequest.Create(url);
 
